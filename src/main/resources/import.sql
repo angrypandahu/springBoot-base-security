@@ -1,0 +1,13 @@
+INSERT INTO `sys_permission` VALUES ('2', 'baseRole url', 'hello', 0, '/hello');
+INSERT INTO `sys_permission` VALUES ('3', 'admin url', 'admin', 0, '/admin');
+INSERT INTO `sys_role` VALUES ('1', 'admin');
+INSERT INTO `sys_role` VALUES ('2', 'baseRole');
+INSERT INTO `sys_role_permission` VALUES ('1', '3');
+INSERT INTO `sys_role_permission` VALUES ('2', '2');
+INSERT INTO `sys_user` VALUES ('1', 'E10ADC3949BA59ABBE56E057F20F883E', 'tuyi');
+INSERT INTO `sys_user` VALUES ('2', 'E10ADC3949BA59ABBE56E057F20F883E', 'zs');
+INSERT INTO `sys_user` VALUES ('3', 'E10ADC3949BA59ABBE56E057F20F883E', 'ls');
+INSERT INTO `sys_user_role` VALUES ('1', '1');
+INSERT INTO `sys_user_role` VALUES ('2', '2');
+INSERT INTO `sys_user_role` VALUES ('3', '2');
+INSERT INTO `sys_user_role` VALUES ('1', '2');

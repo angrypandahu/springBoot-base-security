@@ -41,7 +41,7 @@ public class MyCustomUserService implements UserDetailsService{
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        logger.info("根据名称获取用户信息： username is {}",username);
+        logger.info("User info:username is {}",username);
 
         SysUser user = sysUserMapper.findUserByUsername(username);
         if(user == null)
@@ -51,7 +51,7 @@ public class MyCustomUserService implements UserDetailsService{
         //List<SysPermission> sysPermissions = sysUserMapper.findPermissionsByUsername(user.getUsername());
         List<SysRole> sysRoles = sysUserMapper.findRolesByUsername(user.getUsername());
 
-        logger.info("用户角色个数为{}",sysRoles.size());
+        logger.info("User's roles {}",sysRoles.size());
         logger.info("--------------all Roles--------------");
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         for (SysRole sysRole : sysRoles) {
